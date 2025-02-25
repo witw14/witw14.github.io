@@ -10,6 +10,9 @@
             color:black;
             font-size: 16px;
         }
+        .c {
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +69,7 @@
     </div>
     <div class="">
     <p>成员照片1</p>
-    <img src="/witw14/D1ngW.jpg" alt="该图片无法显示" width="200"><br><hr>
+    <img id="section1" src="D1ngW.jpg" alt="该图片无法显示" width="200"><br><hr>
     <p>成员照片2</p>
     <img src="D2ngW.jpg" alt="该图片无法显示"><br><hr>
     <p>成员照片3</p>
@@ -96,10 +99,327 @@
             <input type="checkbox" name="best985"> 北京大学
             <br><br>
             <input type="submit" value="are you sure">
+        </form><br>
+        <hr><br>
+        <form action="#">
+            <input type="text" placeholder="请输入" disabled>
+            <input type="text" placeholder="请输入" readonly>
+            <input type="text" placeholder="请输入" required>
+            <input type="submit" value="ok">
         </form>
-
+        <abbr title="HyperText Markup Language">HTML</abbr>
     </div>
-</body>
-</html>
+    <p class="a b c d">拥有多个标签</p>
+
+    <p>在这个示例中，第一个和第二个引用使用了 blockquote 标签，因为它们较长，需要独立的块来展示；而第三个引用使用了 q 标签，因为它比较短，可以内联显示。
+    </p>  
+        <blockquote>
+            <p>Life is what happens when you're busy making other plans.</p>
+            <footer>— John Lennon</footer>
+        </blockquote>
+    
+        <blockquote>
+            <p>If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals.</p>
+            <footer>— J.K. Rowling, Harry Potter and the Goblet of Fire</footer>
+        </blockquote>
+    
+        <p>
+            In his famous quote, Einstein said: <q>E=mc²</q>
+        </p>
+        <code>计算机输出</code>
+<br />
+<kbd>键盘输入</kbd>
+<br />
+<tt>打字机文本</tt>
+<br />
+<samp>计算机代码样本</samp>
+<br />
+<var>计算机变量</var>
+<br />
 
 <hr><br><br><br><br><br><br><br>
+<p>这是一个<sub>下标</sub></p>
+<p>这是一个<sup>上标</sup></p>
+
+<a href="D1ngW.jpg" download="D1ngW.jpg">下载资料</a>
+<!-- 链接到页面中的某个部分 -->
+ <br><br>
+<a href="#section1" id="section2">跳转到第1部分</a>
+<a href="/DOM.html#section1">跳转到DOM部分</a>
+
+<br><br><br>
+<h4>空链接</h4>
+<a href="#">导航到页面顶部</a><hr>
+<a href="javascript:void(0)">阻止默认行为，不刷新页面</a><hr>
+<a href="">刷新当前页面</a><hr>
+<a href="about:blank" target="_blank">打开空白页面</a><hr>
+<a href="" role="button">链接表现为按钮</a>
+
+<br><br><br>
+<a href="#" style="text-decoration: none;">没有下划线的链接</a>
+
+<h4>单元格跨两列:</h4>
+<table border="1">
+<tr>
+  <th>Name</th>
+  <th colspan="2">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>单元格跨两行:</h4>
+<table border="1">
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+<br><br><br><br>
+<form action="#">
+    <label for="country">国家:</label>
+    <select id="country" name="country">
+        <option value="cn">CN</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select>
+</form>
+<br><br><br><br>
+
+<p>以下界面无法用firefox查看，请更换浏览器</p>
+<iframe src="Flex弹性布局.html" frameborder="0" width=100%  height=250px></iframe>
+<p>以上界面无法用firefox查看，请更换浏览器</p>
+
+
+<p onclick="hello()">say</p>
+
+<script>document.write('您只能在 HTML 输出流中使用 document.write（比如这个）。 如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。')</script><hr>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+    <script>
+    
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    ctx.font="30px Arial";
+    ctx.strokeText("Hello World",10,50);
+    
+    </script>
+
+<div style="text-align:center"> 
+    <button onclick="playPause()">播放/暂停</button> 
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <br> 
+    <video id="video1" width="420">
+      <source src="/witw14/resour/mov_bbb.mp4" type="video/mp4">
+      <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+      您的浏览器不支持 HTML5 video 标签。
+    </video>
+  </div> 
+  <script> 
+    var myVideo=document.getElementById("video1"); 
+    
+    function playPause()
+    { 
+        if (myVideo.paused) 
+          myVideo.play(); 
+        else 
+          myVideo.pause(); 
+    } 
+    
+        function makeBig()
+    { 
+        myVideo.width=560; 
+    } 
+    
+        function makeSmall()
+    { 
+        myVideo.width=320; 
+    } 
+    
+        function makeNormal()
+    { 
+        myVideo.width=420; 
+    } 
+    </script>
+<br><hr><br>
+<form action="javascript:void(0)">
+    生日: <input type="date" name="bday">
+    <input type="submit">
+  </form>
+<hr>
+<form action="javascript:void(0)">
+    数量 ( 1 到 5 之间): <input type="number" name="quantity" min="1" max="5">
+    <input type="submit">
+  </form>
+<hr>
+<form action="javascript:void(0)" method="get">
+    <input type="number" name="points" min="0" max="10" step="3" value="6">
+    <input type="submit">
+    </form>
+<hr>
+<form action="javascript:void(0)" method="get">
+    显示大小: <input onclick="getvalue133()" type="range" name="point" min="1" max="100">
+    <span>当前值：</span><span id="value133"></span>
+    <input type="submit">
+    </form>
+    <script>
+        function getvalue133() {
+            var point133 = document.getElementsByName('point')[0];
+            var value133 = point133.value;
+            let value133_show = document.getElementById('value133');
+            value133_show.innerHTML = value133;
+            console.log(point133);
+            console.log(value133);
+            console.log('try');
+            
+        }
+        getvalue133();
+        
+        
+    </script>
+    <hr>
+<form action="demo-form.php">
+    选择时间: <input type="time" name="usr_time">
+    <input type="submit">
+  </form>
+  <p>此选项在firefox上不可用</p>
+  <hr>
+  <p>预选项（点击空白处弹出）</p>
+  <form action="demo-form.php" method="get">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+    <input type="submit">
+    </form>
+    <hr>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <input type="range" id="a" value="50">100
+        +<input type="number" id="b" value="50">
+        =<output name="x" for="a b"></output>
+        </form>
+    <hr>
+    <form action="javascript:void(0)" autocomplete="on">
+        First name:<input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        E-mail: <input type="email" name="email" autocomplete="off"><br>
+        <input type="submit">
+      </form>
+      
+      <p>填写并提交表单，然后重新刷新页面查看如何自动填充内容。</p>
+      <p>注意 form 的 autocomplete 属性为  "on"（开），但是 e-mail 自动为“off”（关）。</p>
+      <hr>
+      <p>自动聚焦（已注释掉，需要查看时消掉注释可见）</p>
+      <form action="javascript:void(0)">
+        <!-- First name: <input type="text" name="fname" autofocus><br> -->
+        Last name: <input type="text" name="lname"><br>
+        <input type="submit">
+      </form>
+      <hr>
+      <p>使用from属性使不在form范围内的input标签同属此表单</p>
+      <form action="javascript:void(0)" id="form1">
+        First name: <input type="text" name="fname"><br>
+        <input type="submit" value="提交">
+        </form>
+        
+        <p> "Last name" 字段没有在 form 表单之内，但它也是 form 表单的一部分。</p>
+        
+        Last name: <input type="text" name="lname" form="form1">
+        <hr>
+        <p>多个提交按钮，后者带有dormaction标签以改变其提交表单的URL（有的话会覆盖原action属性）</p>
+        <form action="javascript:void(0)">
+            First name: <input type="text" name="fname"><br><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="提交"><br><br>
+            <input type="submit" formaction="javascript:void(0)" value="提交">
+          </form>
+          <hr>
+          <p>用formmethod属性覆盖原来的method属性（get/post）</p>
+          <form action="javascript:void(0)" method="get">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="提交">
+            <input type="submit" formmethod="post" formaction="demo-post.php" value="使用 POST 提交">
+          </form>
+        <hr>
+        <form action="javascript:void(0)">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="image" src="/witw14/resour/img_submit.gif"  alt="Submit" width="48" height="48">
+          </form>
+          <hr>
+          <p>min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定（约束）。
+            注意: min、max 和 step 属性适用于以下类型的 <input> 标签：date pickers、number 以及 range。</p>
+          <form action="javascript:void(0)">
+
+            输入 1980-01-01 之前的日期:
+             <input type="date" name="bday" max="1979-12-31"><br>
+           
+            输入 2000-01-01 之后的日期:
+             <input type="date" name="bday" min="2000-01-02"><br>
+           
+             数量 (在1和5之间):
+             <input type="number" name="quantity" min="1" max="5"><br>
+           
+             <input type="submit">
+           </form>
+           <hr>
+           <form action="demo-form.php">
+            <p>选择一个文件</p>
+            选择图片: <input type="file" name="img">
+            <p>选择复数个文件（带有multiple属性）</p>
+            选择图片: <input type="file" name="img" multiple>
+            <input type="submit">
+          </form>
+          <hr>
+          <p>用pattern标识上传规范（正则表达式）</p>
+          <form action="demo-form.php">
+            Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+            <input type="submit">
+          </form>
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script>
+    function hello() {
+        document.write('<p>hello world!</p>')
+    }
+</script>
+<noscript>您的浏览器不支持script脚本</noscript>
+
+</body>
+</html>
